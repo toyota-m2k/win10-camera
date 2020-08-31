@@ -62,5 +62,14 @@ namespace CameraTestApp
             var file = await camera.CaptureFileAsync(CameraCaptureUIMode.Video);
         }
 
+        private async void VideoOrPhoto(object sender, TappedRoutedEventArgs e) {
+            var camera = new CameraCaptureUI();
+            camera.PhotoSettings.Format = CameraCaptureUIPhotoFormat.Jpeg;
+            camera.PhotoSettings.AllowCropping = true;
+            camera.VideoSettings.Format = CameraCaptureUIVideoFormat.Mp4;
+            camera.VideoSettings.AllowTrimming = true;
+            var file = await camera.CaptureFileAsync(CameraCaptureUIMode.PhotoOrVideo);
+            Debug.WriteLine($"file={file.Name} ({file.ContentType})");
+        }
     }
 }

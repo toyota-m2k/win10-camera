@@ -12,5 +12,6 @@
         <Button Margin="10" Tapped="PhotoCrop">Photo (clopping)</Button>
         <Button Margin="10" Tapped="VideoNoTrim">Video</Button>
         <Button Margin="10" Tapped="VideoTrim">Video (trimming)</Button>
+        <Button Margin="10" Tapped="VideoOrPhoto">Video or Photo</Button>
     </StackPanel>
 </Page>
